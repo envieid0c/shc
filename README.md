@@ -1,3 +1,5 @@
+[![build status image](https://travis-ci.org/neurobin/shc.svg?branch=release)](https://travis-ci.org/neurobin/shc) [![Codewake](https://www.codewake.com/badges/ask_question.svg)](https://www.codewake.com/p/shc)
+
 # Shell Script Compiler
 
 A generic shell script compiler. Shc takes a script, which is
@@ -21,6 +23,8 @@ decrypt  and  execute  the  code with the shell -c option.
 2. make
 3. sudo make install
 
+**Note:** If `make` fails due to *automake* version, run `./autogen.sh` before running the above commands.
+
 ##On Ubuntu:
 
 ```
@@ -36,6 +40,7 @@ If the above installation method seems like too much work, then just copy the co
 ```
 shc [options]
 shc -f script.sh -o binary
+shc -U -f script.sh -o binary # Untraceable binary (prevent strace, ptrace etc..)
 ```
 
 
